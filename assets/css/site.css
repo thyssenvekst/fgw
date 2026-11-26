@@ -306,48 +306,6 @@ a.reiter:hover { transform: translateY(-4px); }
 .seitenkopf + .blatt { padding-top: var(--raum-3); }
 .person:first-child { border-top: 0; padding-top: 0; }
 
-/* ---------- Startseite: Editorial ---------- */
-.ed-hero { padding-block: clamp(36px, 7vh, 88px) clamp(48px, 9vh, 112px); }
-.ed-kopfzeile { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 24px; margin: 0 0 clamp(28px, 6vh, 72px); padding-bottom: 14px; border-bottom: 1px solid var(--anthrazit); font-size: 0.95rem; color: var(--text-leise); }
-.ed-hero__raster { display: grid; grid-template-columns: 1fr; gap: var(--raum-3); }
-@media (min-width: 1000px) { .ed-hero__raster { grid-template-columns: minmax(0, 8.4fr) minmax(0, 3.6fr); gap: clamp(32px, 4vw, 72px); align-items: end; } }
-.ed-hero__titel { margin: 0; font-family: var(--serif); font-weight: 400; color: var(--anthrazit); font-size: clamp(2.9rem, 8.4vw, 8.2rem); line-height: 0.96; letter-spacing: -0.025em; hyphens: manual; }
-.ed-punkt { color: var(--bordeaux); }
-.ed-hero__info { font-size: 1.02rem; border-top: 1px solid var(--linie); padding-top: 18px; }
-@media (min-width: 1000px) { .ed-hero__info { padding-bottom: 0.9rem; } }
-.ed-hero__info p { margin: 0 0 18px; }
-.ed-hero__tel { font-family: var(--serif); font-size: clamp(1.6rem, 2.2vw, 2rem); line-height: 1.1; }
-.ed-hero__tel a { color: var(--bordeaux); text-decoration: none; border-bottom: 1px solid currentColor; }
-.ed-hero__tel a:hover { border-bottom-width: 2px; }
-.ed-hero__klein { color: var(--text-leise); font-size: 0.95rem; line-height: 1.6; }
-.ed-hero__zitat { margin: clamp(40px, 8vh, 96px) 0 0; max-width: 46rem; margin-left: auto; }
-.ed-hero__zitat p { margin: 0; font-family: var(--serif); font-style: italic; font-size: clamp(1.15rem, 1.6vw, 1.45rem); line-height: 1.45; color: var(--text-leise); }
-.ed-hero__zitat footer { margin-top: 8px; font-size: 0.92rem; color: var(--text-leise); }
-
-.ed-teil { padding-block: var(--raum-4); border-top: 1px solid var(--anthrazit); }
-.ed-teil__titel { margin: 0 0 var(--raum-3); font-family: var(--serif); font-weight: 400; font-size: clamp(1.05rem, 1.2vw, 1.2rem); letter-spacing: 0.01em; color: var(--bordeaux); }
-.ed-gebiet { display: grid; grid-template-columns: 1fr; gap: 14px var(--raum-2); padding-block: var(--raum-3); border-top: 1px solid var(--linie); }
-@media (min-width: 900px) { .ed-gebiet { grid-template-columns: minmax(0, 5fr) minmax(0, 5fr) minmax(0, 2fr); align-items: start; } }
-.ed-gebiet__titel { margin: 0; font-family: var(--serif); font-weight: 400; font-size: clamp(2.4rem, 5.2vw, 4.6rem); line-height: 1; letter-spacing: -0.02em; color: var(--anthrazit); }
-.ed-gebiet__themen { margin: 0; font-family: var(--serif); font-size: clamp(1.2rem, 1.6vw, 1.45rem); line-height: 1.45; color: var(--anthrazit); }
-.ed-gebiet__wer { margin: 14px 0 0; font-size: 0.98rem; color: var(--text-leise); }
-.ed-gebiet__wer a { color: var(--anthrazit); }
-.ed-gebiet__bild { display: block; width: min(100%, 200px); }
-.ed-gebiet__bild img { width: 100%; filter: grayscale(1) contrast(1.04); }
-.ed-teil__fuss { margin: var(--raum-2) 0 0; }
-
-.ed-kanzlei__raster, .ed-kontakt__raster { display: grid; grid-template-columns: 1fr; gap: var(--raum-2); }
-@media (min-width: 900px) {
-  .ed-kanzlei__raster { grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); column-gap: clamp(32px, 5vw, 88px); }
-  .ed-kanzlei__raster .ed-teil__titel { grid-column: 1 / -1; }
-  .ed-kontakt__raster { grid-template-columns: minmax(0, 8fr) minmax(0, 4fr); align-items: end; }
-  .ed-kontakt__raster .ed-teil__titel { grid-column: 1 / -1; }
-}
-.ed-kanzlei__bild { margin: 0; }
-.ed-kanzlei__bild img { width: 100%; filter: grayscale(1); }
-.ed-lead { font-family: var(--serif); font-size: clamp(1.4rem, 2.2vw, 1.95rem); line-height: 1.3; color: var(--anthrazit); margin: 0 0 var(--raum-2); }
-.ed-kanzlei__text p { max-width: 34em; }
-.ed-kontakt__gross { margin: 0; font-family: var(--serif); font-size: clamp(1.9rem, 4.6vw, 4rem); line-height: 1.15; letter-spacing: -0.015em; overflow-wrap: anywhere; }
-.ed-kontakt__gross a { color: var(--anthrazit); text-decoration: none; }
-.ed-kontakt__gross a:hover { color: var(--bordeaux); }
-.ed-kontakt__klein { margin: 0; color: var(--text-leise); }
+/* Startseite: große Überschrift in Libre Caslon Display (SIL OFL 1.1) */
+@font-face { font-family: "Libre Caslon Display"; font-style: normal; font-weight: 400; font-display: swap; src: url("../fonts/libre-caslon-display-latin-400-normal.woff2") format("woff2"); }
+.deckel h1 { font-family: "Libre Caslon Display", var(--serif); font-weight: 400; letter-spacing: -0.01em; line-height: 1.02; font-size: clamp(2.2rem, 4.6vw, 4.1rem); }
